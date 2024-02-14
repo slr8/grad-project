@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead th {
+    background-color: #0060E4;
+    height: 80px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #3589fe;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.one-duaration {
+    height: 100%;
+}
+
+.two-duaration {
+    height: 200%;
+}
+
+.three-duaration {
+    height: 300%;
+}
+
+.four-duaration {
+    height: 400%;
+}
+
+td {
+    width: 200px;
+    height: 130px;
+}
+
+.time {
+    width: 120px;
+    background-color: #006BFFBF;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
