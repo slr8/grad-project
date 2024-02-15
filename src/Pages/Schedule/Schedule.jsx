@@ -3,12 +3,14 @@ import FirstColumnCell from '../../Components/UserCells/FirstColumnCell/FirstCol
 import FourthColumnCell from '../../Components/UserCells/FourthColumnCell/FourthColumnCell'
 import SecondColumnCell from '../../Components/UserCells/SecondColumnCell/SecondColumnCell'
 import ThirdColumnCell from '../../Components/UserCells/ThirdColumnCell/ThirdColumnCell'
+import ScrollToTop from '../../UI/ScrollToTop'
 import './schedule.css'
 
 const Schedule = () => {
     let duaration = 1
     return (
         <div className='bg-[#0060E42B]'>
+            <ScrollToTop />
             <div className='flex justify-between px-20 items-center'>
                 <img src="/Images/Schedule/Assiut_University_logo 1.png" className='w-[100px]' />
                 <span className='text-[#0060E4] text-[50px] font-semibold'>د/ أحمد حسني</span>

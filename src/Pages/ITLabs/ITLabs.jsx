@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import ScrollToTop from '../../UI/ScrollToTop'
 
 const ITLabs = () => {
     return (
-        <div>
+        <div className='place-items-center'>
+            <ScrollToTop />
             <div className="mb-24">
                 <div className="w-[561px] h-[70px] border border-[#0060E4] rounded-3xl bg-[#0060E4]
         text-center text-white font-bold text-5xl font-['Poppins'] pt-2 absolute top-8 left-[510px]">
@@ -126,11 +129,13 @@ const ITLabs = () => {
         pt-4">
                     معمل 3 ب
                 </div>
-                <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
+                <Link to={'thirdFloorLabDevices1'}>
+                    <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
         text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[1280px] left-[970px]
         pt-4">
-                    معمل 3 أ
-                </div>
+                        معمل 3 أ
+                    </div>
+                </Link>
 
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
         text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[1410px] left-[250px]

@@ -2,10 +2,12 @@ import React from 'react'
 import MaterialBox from '../../Components/MaterialBox/MaterialBox'
 import MaterialBox2 from '../../Components/MaterialBox/MaterialBox2'
 import Header2 from '../../Components/Header/Header2'
+import ScrollToTop from '../../UI/ScrollToTop'
 
 const Material = () => {
     return (
         <div className='bg-[#0060E430] pb-10 pt-10'>
+            <ScrollToTop />
             <div class=" grid grid-cols-2 mt-2 grid-rows-2 gap-4">
                 <Header2 title={'Material'} />
                 <MaterialBox text={'First Year (first semester)'} />

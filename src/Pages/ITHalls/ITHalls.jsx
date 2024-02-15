@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import ScrollToTop from '../../UI/ScrollToTop'
 
 const ITHalls = () => {
     return (
         <div>
+            <ScrollToTop />
             <div className="w-[561px] h-[81px] absolute top-12 left-[500px]  bg-[#0060E4] border
         rounded-3xl text-white text-center font-['Poppins'] text-5xl font-bold p-3 border-[#0060E4]">
                 المدرجات
@@ -36,10 +39,12 @@ const ITHalls = () => {
                 rounded-3xl text-white text-center font-['Poppins'] text-5xl font-bold p-3 border-[#00439F]">
                         مدرج 3
                     </div>
-                    <div className="w-[370px] h-[79px] absolute top-[470px] left-[235px] bg-[#00439F] border
+                    <Link to={"itHallsDevices5"}>
+                        <div className="w-[370px] h-[79px] absolute top-[470px] left-[235px] bg-[#00439F] border
                 rounded-3xl text-white text-center font-['Poppins'] text-5xl font-bold p-3 border-[#00439F]">
-                        مدرج 5
-                    </div>
+                            مدرج 5
+                        </div>
+                    </Link>
                     <div className="w-[370px] h-[79px] absolute top-[610px] left-[235px] bg-[#00439F] border
                 rounded-3xl text-white text-center font-['Poppins'] text-5xl font-bold p-3 border-[#00439F]">
                         مدرج 7
