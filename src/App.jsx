@@ -16,6 +16,7 @@ import CoursesDetails3 from './Pages/CoursesDetails/CoursesDetails3';
 import ITHallDevices5 from './Pages/ITHallDevices/ITHallDevices5';
 import ThirdFloorLabDevices1 from './Pages/ITLabDevices/ThirdFloor/ThirdfFloorLabDevices1';
 import JoiningApp from './Pages/JoiningApp/JoiningApp';
+import HallsSchedule from './Pages/AdminSchedules/HallsSchedule';
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "/itHome/itLabs/thirdFloorLabDevices1",
         element: <ThirdFloorLabDevices1 />
+      },
+      {
+        path: "hallsSchedule",
+        element: <HallsSchedule />
       },
     ]
   }
