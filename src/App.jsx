@@ -15,6 +15,7 @@ import AppLayout from './UI/AppLayout';
 import CoursesDetails3 from './Pages/CoursesDetails/CoursesDetails3';
 import ITHallDevices5 from './Pages/ITHallDevices/ITHallDevices5';
 import ThirdFloorLabDevices1 from './Pages/ITLabDevices/ThirdFloor/ThirdfFloorLabDevices1';
+import JoiningApp from './Pages/JoiningApp/JoiningApp';
 
 const router = createBrowserRouter([
   {
@@ -25,8 +26,16 @@ const router = createBrowserRouter([
         element: <Login />
       },
       {
+        path: "/joiningApp",
+        element: <JoiningApp />
+      },
+      {
         path: "/home",
         element: <Home />
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs />
       },
       {
         path: "/home/professor",

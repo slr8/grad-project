@@ -42,7 +42,7 @@ const ContactUs = () => {
                                 <div className={css["form-group"]}>
                                     <fieldset className="w-12 border-2 rounded-md pr-4 border-[#0060E4] focus:border-[#0060E4] bg-white">
                                         <legend className={css.legend + "text-[#0059D5]"}> Comment</legend>
-                                        <textarea name="" id="" cols="2" rows="2" className={css.textarea + ' focus:outline-none pl-2'}></textarea>
+                                        <textarea name="" id="" cols="2" rows="2" className={css.textarea + ' focus:outline-none pl-2 text-[#0059D5]'}></textarea>
                                     </fieldset>
                                 </div>
                                 <button type="submit" className={css.button + ' bg-[#0060E4]'}>Submit</button>

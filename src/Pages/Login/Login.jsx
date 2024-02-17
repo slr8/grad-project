@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./login.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     let [overlay, setOverlay] = useState(false)
@@ -27,7 +27,7 @@ const Login = () => {
             </div>
             <form className="mt-[12rem] mb-10 w-[456px] mx-auto">
                 <div className="relative inline-block mb-6">
-                    <input type="text" placeholder="Enter your academic mail" className="mx-auto block w-[455px] h-12 pl-12 text-[20px] font-semibold border-b-4 focus:outline-none focus:border-b-[#0166ff] transition-all duration-300 outline-none text-[#0166ff] placeholder:focus:text-[#0166ff]" />
+                    <input type="text" placeholder="Enter your academic mail" className="mx-auto block w-[455px] h-12 pl-12 text-[20px] font-semibold bbb focus:outline-none focus:border-b-[#0166ff] transition-all duration-300 outline-none text-[#0166ff] placeholder:focus:text-[#0166ff]" />
                     <svg width="35px" height="50" className="absolute top-[-2px] left-2 " viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="35px" height="50" fill="white" />
                         <path d="M45.8333 12.5007C45.8333 10.209 43.9583 8.33398 41.6666 8.33398H8.33329C6.04163 8.33398 4.16663 10.209 4.16663 12.5007V37.5007C4.16663 39.7923 6.04163 41.6673 8.33329 41.6673H41.6666C43.9583 41.6673 45.8333 39.7923 45.8333 37.5007V12.5007ZM41.6666 12.5007L25 22.9173L8.33329 12.5007H41.6666ZM41.6666 37.5007H8.33329V16.6673L25 27.084L41.6666 16.6673V37.5007Z" fill="#BBBBBB" />
@@ -35,7 +35,7 @@ const Login = () => {
                 </div>
                 <br />
                 <div className="relative inline-block ">
-                    <input type="password" placeholder="Enter your password" className="mx-auto block w-[455px] h-12 pl-12 pr-14 text-[20px] font-semibold border-b-4 focus:outline-none focus:border-b-[#0166ff] transition-all duration-300 outline-none text-[#0166ff] placeholder:focus:text-[#0166ff]" />
+                    <input type="password" placeholder="Enter your password" className="mx-auto block w-[455px] h-12 pl-12 pr-14 text-[20px] font-semibold bbb focus:outline-none focus:border-b-[#0166ff] transition-all duration-300 outline-none text-[#0166ff] placeholder:focus:text-[#0166ff]" />
                     <svg width="35" height="50" className="absolute bottom-[3px] left-2 " viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M25 35.4173C23.895 35.4173 22.8352 34.9783 22.0538 34.1969C21.2724 33.4155 20.8334 32.3557 20.8334 31.2507C20.8334 28.9382 22.6875 27.084 25 27.084C26.1051 27.084 27.1649 27.523 27.9463 28.3044C28.7277 29.0858 29.1667 30.1456 29.1667 31.2507C29.1667 32.3557 28.7277 33.4155 27.9463 34.1969C27.1649 34.9783 26.1051 35.4173 25 35.4173ZM37.5 41.6673V20.834H12.5V41.6673H37.5ZM37.5 16.6673C38.6051 16.6673 39.6649 17.1063 40.4463 17.8877C41.2277 18.6691 41.6667 19.7289 41.6667 20.834V41.6673C41.6667 42.7724 41.2277 43.8322 40.4463 44.6136C39.6649 45.395 38.6051 45.834 37.5 45.834H12.5C11.395 45.834 10.3352 45.395 9.55376 44.6136C8.77236 43.8322 8.33337 42.7724 8.33337 41.6673V20.834C8.33337 18.5215 10.1875 16.6673 12.5 16.6673H14.5834V12.5007C14.5834 9.73798 15.6808 7.08846 17.6343 5.13496C19.5878 3.18145 22.2374 2.08398 25 2.08398C26.368 2.08398 27.7225 2.35342 28.9863 2.87691C30.2501 3.40039 31.3985 4.16768 32.3657 5.13496C33.333 6.10223 34.1003 7.25056 34.6238 8.51436C35.1473 9.77817 35.4167 11.1327 35.4167 12.5007V16.6673H37.5ZM25 6.25065C23.3424 6.25065 21.7527 6.90913 20.5806 8.08123C19.4085 9.25334 18.75 10.843 18.75 12.5007V16.6673H31.25V12.5007C31.25 10.843 30.5916 9.25334 29.4195 8.08123C28.2474 6.90913 26.6576 6.25065 25 6.25065Z" fill="#BBBBBB" />
                     </svg>
@@ -44,7 +44,9 @@ const Login = () => {
                     </svg>
                 </div>
                 <div className="text-right mt-3">
-                    <a href="" className="underline font-semibold text-[#0166FF] text-xl">طلب إلتحاق لطلاب المرحلة الأولى</a>
+                    <Link to={'joiningApp'}>
+                        <a href="" className="underline font-semibold text-[#0166FF] text-xl">طلب إلتحاق لطلاب المرحلة الأولى</a>
+                    </Link>
                 </div>
                 <div className="text-center">
                     <button type="submit" onClick={handleSubmit} className="w-[452px] h-[68px] bg-[#0060E4] rounded-[10px] flex justify-center items-center gap-2 pr-2 mt-5 ml-0 pl-0">
@@ -55,7 +57,8 @@ const Login = () => {
                     </button>
                 </div>
             </form>
-            {overlay &&
+            {
+                overlay &&
                 <div className="absolute top-28 right-0 w-[400px] h-[460px] mr-20 bg-white">
                     <div className="relative">
                         <p className="text-center font-semibold text-3xl pt-6 text-[#0166FF]">About Us</p>
@@ -66,7 +69,7 @@ const Login = () => {
                     <p className="font-semibold text-2xl leading-9 tracking-[3%] w-[80%] mx-auto mt-2">We are students at the Faculty of Computers and Information, Assiut University. We created this website to help students and those in charge of teaching work, including doctors, teaching assistants, and all faculty employees, to know their weekly schedule.</p>
                 </div>
             }
-        </div>
+        </div >
     )
 }
 
