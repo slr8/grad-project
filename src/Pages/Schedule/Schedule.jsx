@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux'
 import FifthColumnCell from '../../Components/UserCells/FifthColumnCell/FifthColumnCell'
 import FirstColumnCell from '../../Components/UserCells/FirstColumnCell/FirstColumnCell'
 import FourthColumnCell from '../../Components/UserCells/FourthColumnCell/FourthColumnCell'
@@ -7,13 +8,14 @@ import ScrollToTop from '../../UI/ScrollToTop'
 import './schedule.css'
 
 const Schedule = () => {
+    const username = useSelector((state) => state.user.username)
     let duaration = 1
     return (
         <div className='bg-[#0060E42B]'>
             <ScrollToTop />
             <div className='flex justify-between px-20 items-center'>
                 <img src="/Images/Schedule/Assiut_University_logo 1.png" className='w-[100px]' />
-                <span className='text-[#0060E4] text-[50px] font-semibold'>د/ أحمد حسني</span>
+                <span className='text-[#0060E4] text-[50px] font-semibold'>د/ {username}</span>
                 <img src="/Images/Schedule/fci.png" className='w-[140px] h-36' />
             </div>
             <div>

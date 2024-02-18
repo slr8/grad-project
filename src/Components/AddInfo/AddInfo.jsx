@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddInfo = () => {
+const AddInfo = ({ cancel }) => {
     return (
         <form className='bg-gray-300 w-full h-full rounded-r-lg border-l-8 border-solid flex-col border-blue-800 flex justify-center items-center opacity-100 transition-all delay-100 hover:opacity-100'>
             <div className='flex flex-col'>
@@ -47,7 +47,7 @@ const AddInfo = () => {
                 </div>
             </div>
             <div className='flex gap-5'>
-                <button className='bg-red-700 ml-5  mt-3 py-0 px-3'>Cancel</button>
+                <button className='bg-red-700 ml-5  mt-3 py-0 px-3' onClick={cancel}>Cancel</button>
                 <button className='bg-green-500 ml-0  mr-5 mt-3 py-0 px-3'>Submit</button>
             </div>
         </form >

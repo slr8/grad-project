@@ -36,6 +36,10 @@ const HallsSchedule = () => {
                         </thead>
                         <tbody>
                             <HallsBodySchedule day={"Sunday"} />
+                            <HallsBodySchedule day={"Monday"} />
+                            <HallsBodySchedule day={"Tuesday"} />
+                            <HallsBodySchedule day={"Wednesday"} />
+                            <HallsBodySchedule day={"Thursday"} />
                         </tbody>
                     </table >
                 </div >

@@ -8,19 +8,26 @@ const HallsBodySchedule = ({ day }) => {
     function handlesubmit(e) {
         setTrue(!tr)
     }
+    function cancelsubmit(event) {
+        event.preventDefault()
+        setTrue(!tr)
+    }
+    function submit(e) {
+        setTrue(!tr)
+    }
     return (
         <>
             <tr className='text-center'>
-                <td colSpan={16} className='bg-[#0060E4] text-white text-5xl font-bold'>{day}</td>
+                <td colSpan={16} className='bg-[#0060E4] text-white text-5xl font-bold sticky top-[107px]'>{day}</td>
             </tr>
             <tr>
                 <td className='time'>08:00 - 09:00</td>
                 <td>
-                    <AddOnHover />
+                    <AddOnHover handle={handlesubmit} tr={tr} />
+                    {tr && <AddInfo cancel={cancelsubmit} />}
                 </td>
                 <td>
                     <CRUDOnHover handle={handlesubmit} tr={tr} />
-                    {tr && <AddInfo />}
                 </td>
                 <td>
                 </td>
