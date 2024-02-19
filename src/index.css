@@ -25,3 +25,8 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #006BFFBF;
 }
+
+.focus {
+    background-color: #0060E4;
+    color: white;
+}

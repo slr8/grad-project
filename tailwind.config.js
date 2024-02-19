@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {
         primary: 'background: rgba(0, 96, 228, 1);',
+      },
+      fontFamily:
+      {
+        'moichiy': ["Mochiy Pop One"]
       }
     },
   },
