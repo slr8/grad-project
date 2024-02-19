@@ -1,6 +1,5 @@
 import React from 'react'
 import { Outlet, useNavigation } from 'react-router-dom'
-import Login from '../Pages/Login/Login';
 import Loader from './Loader';
 
 
