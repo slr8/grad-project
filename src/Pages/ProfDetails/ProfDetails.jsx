@@ -2,11 +2,13 @@ import React from 'react'
 import Header from '../../Components/Header/Header'
 import TaProfBox from '../../Components/TaProfBox/TaProfBox'
 import ScrollToTop from '../../UI/ScrollToTop'
+import Navbar from '../../UI/Navbar'
 
 const ProfDetails = () => {
 
     return (
         <div className='bg-[#C5D1F2] h-full'>
+            <Navbar />
             <ScrollToTop />
             <Header title={"Professor's"} />
             <div className=' grid grid-cols-3 gap-y-14 place-items-center mt-8 pb-8'>

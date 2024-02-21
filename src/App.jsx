@@ -18,6 +18,7 @@ import ThirdFloorLabDevices1 from './Pages/ITLabDevices/ThirdFloor/ThirdfFloorLa
 import JoiningApp from './Pages/JoiningApp/JoiningApp';
 import HallsSchedule from './Pages/AdminSchedules/HallsSchedule';
 import LabsSchedule from './Pages/AdminSchedules/LabsSchedule';
+import ProfSchedule from './Pages/AdminSchedules/ProfSchedule';
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
       {
         path: "labsSchedule",
         element: <LabsSchedule />
+      },
+      {
+        path: "ProfSchedule",
+        element: <ProfSchedule />
       },
     ]
   }
