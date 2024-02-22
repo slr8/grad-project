@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ITNavBar = () => {
     return (
@@ -9,11 +10,11 @@ const ITNavBar = () => {
                     <span className="text-[#0060E4] font-bold text-[35px] font-moichiy">FCI AUN</span>
                 </div >
                 <ul className="flex space-x-8 items-center pt-4  justify-around ml-[8px] font-bold mr-5 ">
-                    <li className="text-[#0060E4] ml-[20px] text-[25px] focus text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[150px] h-[40px] rounded-lg" >Home</li>
-                    <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg">Laboratories</li >
-                    <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[150px] h-[40px] rounded-lg">Halls</li >
-                    <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg">About us </li>
-                    <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[160px] h-[40px] rounded-lg">Contact us</li>
+                    <Link to={"/"}> <li className="text-[#0060E4] ml-[20px] text-[25px] focus text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[150px] h-[40px] rounded-lg" >Home</li></Link>
+                    <Link to={"/itHome/itlabs"}> <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg">Laboratories</li ></Link>
+                    <Link to={"/itHome/ithalls"}> <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[150px] h-[40px] rounded-lg">Halls</li ></Link>
+                    <Link to={""}> <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg">About us </li></Link>
+                    <Link to={"/contactus"}> <li className="text-[#0060E4] ml-[20px] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[160px] h-[40px] rounded-lg">Contact us</li></Link>
                 </ul>
             </div >
         </nav >

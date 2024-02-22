@@ -8,7 +8,6 @@ const ProfDetails = () => {
 
     return (
         <div className='bg-[#C5D1F2] h-full'>
-            <Navbar />
             <ScrollToTop />
             <Header title={"Professor's"} />
             <div className=' grid grid-cols-3 gap-y-14 place-items-center mt-8 pb-8'>
