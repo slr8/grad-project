@@ -13,7 +13,6 @@ const AppLayout = () => {
     console.log(navigate);
     return (
         <>
-            <AdminNavBar />
             {isLoading && <Loader />}
             <Outlet />
         </>
