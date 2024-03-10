@@ -10,13 +10,8 @@ const Login = () => {
     function handleOverlay() {
         setOverlay(!overlay);
     }
-    // const navigate = useNavigate()
-    // function handleSubmit(e) {
-    //     e.preventDefault()
-    //     navigate("/home")
-    // }
     const dispatch = useDispatch();
-    const { loading, error, user } = useSelector((state) => state.auth);
+    const { loading, error } = useSelector((state) => state.auth);
     const [ssn, setSsn] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);

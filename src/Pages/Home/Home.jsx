@@ -5,23 +5,26 @@ import HomeBox2 from "../../Components/HomeBox2/HomeBox2";
 import { useNavigate } from "react-router-dom";
 import ScrollToTop from "../../UI/ScrollToTop";
 import { Fade } from 'react-awesome-reveal';
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutUser } from '../../authActions';
 
 const Home = () => {
     const navigate = useNavigate()
-    function handleSubmit(e) {
-        e.preventDefault()
-        navigate("/")
-    }
+    const dispatch = useDispatch();
+    const handleLogout = () => {
+        dispatch(logoutUser());
+    };
+    const username = useSelector((state) => state.auth.user.userName)
     return (
         <>
             <div className='home mx-[111px]'>
                 <ScrollToTop />
                 <img src="/Images/Home/wave.png" className='absolute right-0 top-0 h-[450px] w-[100%] -z-10' />
-                <img src="/Images/Home/logout.png" onClick={handleSubmit} className="absolute right-6 top-2 cursor-pointer " />
+                <img src="/Images/Home/logout.png" onClick={handleLogout} className="absolute right-6 top-2 cursor-pointer " />
                 <div className='text-white mb-28'>
                     <Fade cascade>
                         <div>
-                            <p className='font-bold text-[64px] mt-8 '>Welcome Ali to</p>
+                            <p className='font-bold text-[64px] mt-8 '>Welcome {username} to</p>
                             <p className='font-medium text-5xl ml-[89px] mt-8'>Faculty of Computer and Information</p>
                             <p className='font-medium text-5xl ml-[89px] mt-12'>Assiut University</p>
                         </div>
