@@ -10,6 +10,7 @@ const Login = () => {
     function handleOverlay() {
         setOverlay(!overlay);
     }
+    const navigate = useNavigate()
     const dispatch = useDispatch();
     const { loading, error } = useSelector((state) => state.auth);
     const [ssn, setSsn] = useState('');
@@ -17,7 +18,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = () => {
-        dispatch(login(ssn, password));
+        dispatch(login(ssn, password, navigate));
         setPassword("")
         setSsn("")
     };

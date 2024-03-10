@@ -6,59 +6,59 @@ const ITLabs = () => {
     return (
         <div className='place-items-center'>
             <ScrollToTop />
-            <div className="mb-24">
+            <div>
                 <div className="w-[561px] h-[70px] border border-[#0060E4] rounded-3xl bg-[#0060E4]
-        text-center text-white font-bold text-5xl font-['Poppins'] pt-2 absolute top-8 left-[510px]">
+        text-center text-white font-bold text-5xl font-['Poppins'] pt-2 absolute top-24 left-[510px]">
                     الدور الارضي
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[150px] left-[250px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[200px] left-[250px]
         pt-4">
                     معمل 0 ج
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[150px] left-[610px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[200px] left-[610px]
         pt-4">
                     معمل 0 ب
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[150px] left-[970px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[200px] left-[970px]
         pt-4">
                     معمل 0 أ
                 </div>
 
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[288px] left-[250px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[320px] left-[250px]
         pt-4">
                     معمل 0 أ
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[288px] left-[610px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[320px] left-[610px]
         pt-4">
                     معمل 0 ه
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[288px] left-[970px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[320px] left-[970px]
         pt-4">
                     معمل 0 د
                 </div>
 
                 <div className="w-[561px] h-[70px] border border-[#0060E4] rounded-3xl bg-[#0060E4]
-        text-center text-white font-bold text-5xl font-['Poppins'] pt-2 absolute top-[420px] left-[510px]">
+        text-center text-white font-bold text-5xl font-['Poppins'] pt-2 absolute top-[440px] left-[510px]">
                     الدور الأول
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[530px] left-[250px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[540px] left-[250px]
         pt-4">
                     معمل 1 ج
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[530px] left-[610px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[540px] left-[610px]
         pt-4">
                     معمل 1 ب
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[530px] left-[970px]
+        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[540px] left-[970px]
         pt-4">
                     معمل 1 أ
                 </div>
@@ -182,8 +182,8 @@ const ITLabs = () => {
                     معمل 4 ه
                 </div>
                 <div className="w-[348px] h-[79px] border border-[#00439F] rounded-3xl bg-[#00439F]
-        text-white text-center  font-bold text-4xl font-['Poppins'] absolute top-[1790px] left-[970px]
-        pt-4 mb-[1500px]">
+        text-white text-center  font-bold text-4xl font-['Poppins']  absolute top-[1790px] left-[970px]
+        pt-4">
                     معمل 4 د
                 </div>
             </div>

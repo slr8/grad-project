@@ -86,13 +86,13 @@ const { wednesday8, wednesday9, wednesday10, wednesday11, wednesday12, wednesday
 const { thursday8, thursday9, thursday10, thursday11, thursday12, thursday13, thursday14, thursday15, thursday16, thursday17, thursday18, thursday19 } = generateAppointments("Thursday", 8, 19);
 
 const Schedule = () => {
-    const username = useSelector((state) => state.user.username)
+    const username = useSelector((state) => state.auth.user.userName)
     return (
         <div className='bg-[#0060E42B]'>
             <ScrollToTop />
             <div className='flex justify-between px-20 items-center'>
                 <img src="/Images/Schedule/Assiut_University_logo 1.png" className='w-[100px]' />
-                <span className='text-[#0060E4] text-[50px] font-semibold'>د/ {username}</span>
+                <span className='text-[#0060E4] text-[50px] font-semibold'> {username}</span>
                 <img src="/Images/Schedule/fci.png" className='w-[140px] h-36' />
             </div>
             <div>

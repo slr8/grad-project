@@ -1,25 +1,27 @@
-import { useNavigate } from 'react-router-dom';
 import { loginStart, loginSuccess, loginFailure, logout } from './Pages/Login/loginSlice';
 import authService from './authService'; // Your authentication service
 
-export const login = (ssn, password) => async (dispatch) => {
-    const navigate = useNavigate(); // Initialize the useNavigate hook
+// Your login action creator
+export const login = (Ssn, password, navigate) => async (dispatch) => {
     try {
         dispatch(loginStart());
-        const response = await authService.login(ssn, password);
-        // Log the entire response
+        const response = await authService.login(Ssn, password);
         console.log('API Response:', response);
 
         const { token, ssn, role, userName } = response;
-
-        // Set the Authorization header
         authService.setAuthHeader(token);
+        localStorage.setItem('userData', JSON.stringify({
+            userName: userName,
+            ssn: ssn,
+            role: role,
+        }));
+
+        localStorage.setItem('token', token);
 
         dispatch(loginSuccess({ ssn, role, userName, token }));
         console.log("Login succ: ", userName, "Token", token, "role", role);
 
-
-        if (response.role === 'ITTechnical') {
+        if (role === 'ITTechnical') {
             navigate('/ithome');
         } else {
             navigate('/home');
@@ -30,8 +32,10 @@ export const login = (ssn, password) => async (dispatch) => {
     }
 };
 
-export const logoutUser = () => async (dispatch) => {
-    const navigate = useNavigate(); // Initialize the useNavigate hook
+export const logoutUser = (navigate) => async (dispatch) => {
+    localStorage.removeItem('userData');
+    localStorage.removeItem('token');
+    authService.removeAuthHeader();
     dispatch(logout());
-    navigate('/');
+    navigate("/")
 };

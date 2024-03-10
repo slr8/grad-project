@@ -10,7 +10,7 @@ const LabsSchedule = () => {
             <div>
                 <div>
                     <table className='w-max'>
-                        <thead className='sticky top-0'>
+                        <thead className='sticky top-[68px]'>
                             <tr>
                                 <LabsScheduleHeader
                                     place={"الدور الأرضي"}

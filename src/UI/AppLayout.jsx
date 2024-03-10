@@ -16,7 +16,6 @@ const AppLayout = () => {
 
     return (
         <>
-
             {role === "TA Admin" ? <AdminNavBar /> :
                 role === "ITTechnical" ? <ITNavBar /> :
                     (role === "TA" || role === "Professor" || role === "Student") ? <Navbar /> : null}

@@ -18,7 +18,7 @@ const HallsBodySchedule = ({ day }) => {
     return (
         <>
             <tr className='text-center'>
-                <td colSpan={16} className='bg-[#0060E4] text-white text-5xl font-bold sticky top-[107px]'>{day}</td>
+                <td colSpan={16} className='bg-[#0060E4] text-white text-5xl font-bold sticky top-[175px]'>{day}</td>
             </tr>
             <tr>
                 <td className='time'>08:00 - 09:00</td>

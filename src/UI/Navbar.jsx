@@ -17,7 +17,7 @@ const Navbar = () => {
                         <span className="text-[#0060E4] font-bold text-[35px] font-moichiy">FCI AUN</span>
                     </div >
                     <ul className="flex space-x-10 items-center pt-4  justify-around ml-[40px]  pr-[100px] font-bold ">
-                        <Link to={'/'}> <li className={`text-[#0060E4] ml-[20px] text-[25px] focus text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg`} > Home</li></Link>
+                        <Link to={'/home'}> <li className={`text-[#0060E4] ml-[20px] text-[25px] focus text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg`} > Home</li></Link>
                         <li onClick={handleClick} className="text-[#0060E4] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px]   rounded-lg">Other Links</li >
                         <Link to={''}> <li className="text-[#0060E4] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg ">About us </li></Link>
                         <Link to={'/contactus'}> <li className="text-[#0060E4] text-[25px] text-center hover:text-[#ffff] transition-all delay-75 hover:bg-[#0060E4] cursor-pointer w-[180px] h-[40px] rounded-lg">Contact us</li></Link>

@@ -10,16 +10,17 @@ import { logoutUser } from '../../authActions';
 
 const Home = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
     const handleLogout = () => {
-        dispatch(logoutUser());
+        dispatch(logoutUser(navigate));
     };
     const username = useSelector((state) => state.auth.user.userName)
     return (
         <>
             <div className='home mx-[111px]'>
                 <ScrollToTop />
-                <img src="/Images/Home/wave.png" className='absolute right-0 top-0 h-[450px] w-[100%] -z-10' />
-                <img src="/Images/Home/logout.png" onClick={handleLogout} className="absolute right-6 top-2 cursor-pointer " />
+                <img src="/Images/Home/wave.png" className='absolute right-0 top-14 h-[450px] w-[100%] -z-10' />
+                <img src="/Images/Home/logout.png" onClick={handleLogout} className="absolute right-6 top-16 cursor-pointer " />
                 <div className='text-white mb-28'>
                     <Fade cascade>
                         <div>
