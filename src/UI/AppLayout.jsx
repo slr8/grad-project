@@ -13,6 +13,7 @@ const AppLayout = () => {
     console.log(navigate);
     return (
         <>
+            {/* {role == "TA Admin" ? <AdminNavBar /> : role == "ITTechnical" ? <ITNavBar /> : <Navbar />} */}
             {isLoading && <Loader />}
             <Outlet />
         </>
