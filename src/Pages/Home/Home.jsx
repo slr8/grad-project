@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../authActions';
 
 const Home = () => {
-    const navigate = useNavigate()
     const dispatch = useDispatch();
     const handleLogout = () => {
         dispatch(logoutUser());

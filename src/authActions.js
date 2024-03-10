@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { loginStart, loginSuccess, loginFailure } from './Pages/Login/loginSlice';
+import { loginStart, loginSuccess, loginFailure, logout } from './Pages/Login/loginSlice';
 import authService from './authService'; // Your authentication service
 
 export const login = (ssn, password) => async (dispatch) => {
@@ -31,6 +31,7 @@ export const login = (ssn, password) => async (dispatch) => {
 };
 
 export const logoutUser = () => async (dispatch) => {
+    const navigate = useNavigate(); // Initialize the useNavigate hook
     dispatch(logout());
     navigate('/');
 };

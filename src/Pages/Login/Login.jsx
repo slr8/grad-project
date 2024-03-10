@@ -20,7 +20,6 @@ const Login = () => {
         dispatch(login(ssn, password));
         setPassword("")
         setSsn("")
-        console.log(user);
     };
 
     return (

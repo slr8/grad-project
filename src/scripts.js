@@ -21,17 +21,6 @@ export const generateRow1 = (apps) => {
                         doc={dayData.doctorName}
                         subject={"Network"}
                         place={"3A"}
-                        height={
-                            dayData.duration === 1
-                                ? 'one-duration'
-                                : dayData.duration === 2
-                                    ? 'two-duration'
-                                    : dayData.duration === 3
-                                        ? 'three-duration'
-                                        : dayData.duration === 4
-                                            ? 'four-duration'
-                                            : 'one-duration'
-                        }
                     />
                 )}
             </td>
@@ -58,17 +47,6 @@ export const generateRow2 = (apps) => {
                             doc={dayData2.doctorName}
                             subject={"Network"}
                             place={"3A"}
-                            height={
-                                dayData2.duration === 1
-                                    ? 'one-duration'
-                                    : dayData2.duration === 2
-                                        ? 'two-duration'
-                                        : dayData2.duration === 3
-                                            ? 'three-duration'
-                                            : dayData2.duration === 4
-                                                ? 'four-duration'
-                                                : 'one-duration'
-                            }
                         />
                     )}
                 </td>
@@ -95,17 +73,6 @@ export const generateRow3 = (apps) => {
                             doc={dayData3.doctorName}
                             subject={"Network"}
                             place={"3A"}
-                            height={
-                                dayData3.duration === 1
-                                    ? 'one-duration'
-                                    : dayData3.duration === 2
-                                        ? 'two-duration'
-                                        : dayData3.duration === 3
-                                            ? 'three-duration'
-                                            : dayData3.duration === 4
-                                                ? 'four-duration'
-                                                : 'one-duration'
-                            }
                         />
                     )}
                 </td>
@@ -135,17 +102,6 @@ export const generateRow4 = (apps, one, two, three, four) => {
                             doc={dayData4.doctorName}
                             subject={"Network"}
                             place={"3A"}
-                            height={
-                                dayData4.duration === 1
-                                    ? 'one-duration'
-                                    : dayData4.duration === 2
-                                        ? 'two-duration'
-                                        : dayData4.duration === 3
-                                            ? 'three-duration'
-                                            : dayData4.duration === 4
-                                                ? 'four-duration'
-                                                : 'one-duration'
-                            }
                         />
                     )}
                 </td>
