@@ -8,47 +8,6 @@ import ScrollToTop from '../../UI/ScrollToTop'
 import { generateRow1, generateRow2, generateRow3, generateRow4 } from '../../scripts'
 import './schedule.css'
 
-
-const appointments = {
-    "appointments": [
-        {
-            "subjectName": "Mathematics",
-            "doctorName": "Dr. Smith",
-            "day": "monday",
-            "startTime": "8:00",
-            "duration": 3
-        },
-        {
-            "subjectName": "History",
-            "doctorName": "Dr. Johnson",
-            "day": "tuesday",
-            "startTime": "9:00",
-            "duration": 2
-        },
-        {
-            "subjectName": "History",
-            "doctorName": "Dr. Johnson",
-            "day": "wednesday",
-            "startTime": "8:00",
-            "duration": 2
-        },
-        {
-            "subjectName": "Physics",
-            "doctorName": "Dr. Davis",
-            "day": "sunday",
-            "startTime": "14:00",
-            "duration": 4
-        },
-        {
-            "subjectName": "English",
-            "doctorName": "Dr. Wilson",
-            "day": "sunday",
-            "startTime": "18:00",
-            "duration": 2
-        }
-    ]
-};
-
 // const sunday8 = appointments.appointments.find(appointment => appointment.day.toLowerCase() === "sunday" && appointment.startTime === "8:00");
 // const sunday9 = appointments.appointments.find(appointment => appointment.day.toLowerCase() === "sunday" && appointment.startTime === "9:00");
 // const sunday10 = appointments.appointments.find(appointment => appointment.day.toLowerCase() === "sunday" && appointment.startTime === "10:00");
@@ -61,32 +20,35 @@ const appointments = {
 // const sunday17 = appointments.appointments.find(appointment => appointment.day.toLowerCase() === "sunday" && appointment.startTime === "17:00");
 // const sunday18 = appointments.appointments.find(appointment => appointment.day.toLowerCase() === "sunday" && appointment.startTime === "18:00");
 // const sunday19 = appointments.appointments.find(appointment => appointment.day.toLowerCase() === "sunday" && appointment.startTime === "19:00");
-const generateAppointments = (day, start, end) => {
-    const appointmentsObj = {};
-    for (let i = start; i <= end; i++) {
-        const appointmentKey = `${day.toLowerCase()}${i}`;
-        appointmentsObj[appointmentKey] = appointments.appointments.find(appointment =>
-            appointment.day.toLowerCase() === day.toLowerCase() && appointment.startTime === `${i}:00`
-        );
-    }
-    return appointmentsObj;
-};
-const apps = {
-    ...generateAppointments("Sunday", 8, 19),
-    ...generateAppointments("Monday", 8, 19),
-    ...generateAppointments("Tuesday", 8, 19),
-    ...generateAppointments("Wednesday", 8, 19),
-    ...generateAppointments("Thursday", 8, 19),
-};
-console.log(apps);
-const { sunday8, sunday9, sunday10, sunday11, sunday12, sunday13, sunday14, sunday15, sunday16, sunday17, sunday18, sunday19 } = generateAppointments("Sunday", 8, 19);
-const { monday8, monday9, monday10, monday11, monday12, monday13, monday14, monday15, monday16, monday17, monday18, monday19 } = generateAppointments("Monday", 8, 19);
-const { tuesday8, tuesday9, tuesday10, tuesday11, tuesday12, tuesday13, tuesday14, tuesday15, tuesday16, tuesday17, tuesday18, tuesday19 } = generateAppointments("Tuesday", 8, 19);
-const { wednesday8, wednesday9, wednesday10, wednesday11, wednesday12, wednesday13, wednesday14, wednesday15, wednesday16, wednesday17, wednesday18, wednesday19 } = generateAppointments("Wednesday", 8, 19);
-const { thursday8, thursday9, thursday10, thursday11, thursday12, thursday13, thursday14, thursday15, thursday16, thursday17, thursday18, thursday19 } = generateAppointments("Thursday", 8, 19);
+
+// const { sunday8, sunday9, sunday10, sunday11, sunday12, sunday13, sunday14, sunday15, sunday16, sunday17, sunday18, sunday19 } = generateAppointments("Sunday", 8, 19);
+// const { monday8, monday9, monday10, monday11, monday12, monday13, monday14, monday15, monday16, monday17, monday18, monday19 } = generateAppointments("Monday", 8, 19);
+// const { tuesday8, tuesday9, tuesday10, tuesday11, tuesday12, tuesday13, tuesday14, tuesday15, tuesday16, tuesday17, tuesday18, tuesday19 } = generateAppointments("Tuesday", 8, 19);
+// const { wednesday8, wednesday9, wednesday10, wednesday11, wednesday12, wednesday13, wednesday14, wednesday15, wednesday16, wednesday17, wednesday18, wednesday19 } = generateAppointments("Wednesday", 8, 19);
+// const { thursday8, thursday9, thursday10, thursday11, thursday12, thursday13, thursday14, thursday15, thursday16, thursday17, thursday18, thursday19 } = generateAppointments("Thursday", 8, 19);
 
 const Schedule = () => {
     const username = useSelector((state) => state.auth.user.userName)
+    const data = useSelector((state) => state.auth.user.schedule)
+    console.log(data);
+    const generateAppointments = (day, start, end) => {
+        const appointmentsObj = {};
+        for (let i = start; i <= end; i++) {
+            const appointmentKey = `${day.toLowerCase()}${i}`;
+            appointmentsObj[appointmentKey] = data.find(e =>
+                e.day.toLowerCase() === day.toLowerCase() && e.startTime === i
+            );
+        }
+        return appointmentsObj;
+    };
+    const apps = {
+        ...generateAppointments("Sunday", 8, 19),
+        ...generateAppointments("Monday", 8, 19),
+        ...generateAppointments("Tuesday", 8, 19),
+        ...generateAppointments("Wednesday", 8, 19),
+        ...generateAppointments("Thursday", 8, 19),
+    };
+    console.log(apps);
     return (
         <div className='bg-[#0060E42B]'>
             <ScrollToTop />
@@ -99,7 +61,7 @@ const Schedule = () => {
                 <div>
                     <table>
                         <thead>
-                            <tr className='sticky top-0'>
+                            <tr className='sticky top-16'>
                                 <th></th>
                                 <th>Sunday</th>
                                 <th>Monday</th>

@@ -8,17 +8,18 @@ export const login = (Ssn, password, navigate) => async (dispatch) => {
         const response = await authService.login(Ssn, password);
         console.log('API Response:', response);
 
-        const { token, ssn, role, userName } = response;
+        const { token, ssn, role, userName, schedule } = response;
         authService.setAuthHeader(token);
         localStorage.setItem('userData', JSON.stringify({
-            userName: userName,
-            ssn: ssn,
-            role: role,
+            userName,
+            ssn,
+            role,
+            schedule
         }));
 
         localStorage.setItem('token', token);
 
-        dispatch(loginSuccess({ ssn, role, userName, token }));
+        dispatch(loginSuccess({ ssn, role, userName, token, schedule }));
         console.log("Login succ: ", userName, "Token", token, "role", role);
 
         if (role === 'ITTechnical') {

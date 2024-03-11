@@ -14,7 +14,7 @@ const HallsSchedule = () => {
             <div>
                 <div>
                     <table className='w-max'>
-                        <thead className='sticky top-[68px]'>
+                        <thead className='sticky z-50 top-[68px]'>
                             <tr>
                                 <th className='bg-white text-[#0060E4]'>مبنى المدرجات</th>
                                 <th>مدرج 1</th>

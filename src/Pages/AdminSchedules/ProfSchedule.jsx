@@ -10,7 +10,7 @@ const ProfSchedule = () => {
             <div>
                 <div>
                     <table className='w-max'>
-                        <thead className='sticky top-[68px]'>
+                        <thead className='sticky z-50 top-[68px]'>
                             <tr>
                                 <TeachingStaffHeader />
                             </tr>

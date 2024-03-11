@@ -10,6 +10,7 @@ const authSlice = createSlice({
             userName: userData.userName || null,
             ssn: userData.ssn || null,
             role: userData.role || null,
+            schedule: userData.schedule || null,
         },
         token: token,
         error: null,
@@ -26,6 +27,7 @@ const authSlice = createSlice({
             state.user.ssn = action.payload.ssn;
             state.user.role = action.payload.role;
             state.token = action.payload.token;
+            state.token = action.payload.schedule;
         },
         loginFailure: (state, action) => {
             state.loading = false;

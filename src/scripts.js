@@ -18,9 +18,13 @@ export const generateRow1 = (apps) => {
             <td key={index} rowSpan={dayData?.duration}>
                 {dayData && (
                     <CellComponent
-                        doc={dayData.doctorName}
-                        subject={"Network"}
-                        place={"3A"}
+                        doc={dayData?.teachingStaffName}
+                        subject={dayData?.courseName}
+                        place={dayData?.location}
+                        year={dayData?.year}
+                        section={dayData?.section}
+                        group={dayData?.groupNumber}
+                        dep={dayData?.departmentName}
                     />
                 )}
             </td>
@@ -44,9 +48,13 @@ export const generateRow2 = (apps) => {
                 <td key={index} rowSpan={dayData2?.duration}>
                     {dayData2 && (
                         <CellComponent
-                            doc={dayData2.doctorName}
-                            subject={"Network"}
-                            place={"3A"}
+                            doc={dayData2?.teachingStaffName}
+                            subject={dayData2?.courseName}
+                            place={dayData2?.location}
+                            year={dayData2?.year}
+                            section={dayData2?.section}
+                            group={dayData2?.groupNumber}
+                            dep={dayData2?.departmentName}
                         />
                     )}
                 </td>
@@ -70,9 +78,13 @@ export const generateRow3 = (apps) => {
                 <td key={index} rowSpan={dayData3?.duration}>
                     {dayData3 && (
                         <CellComponent
-                            doc={dayData3.doctorName}
-                            subject={"Network"}
-                            place={"3A"}
+                            doc={dayData3?.teachingStaffName}
+                            subject={dayData3?.courseName}
+                            place={dayData3?.location}
+                            year={dayData3?.year}
+                            section={dayData3?.section}
+                            group={dayData3?.groupNumber}
+                            dep={dayData3?.departmentName}
                         />
                     )}
                 </td>
@@ -99,9 +111,13 @@ export const generateRow4 = (apps, one, two, three, four) => {
                 <td key={index} rowSpan={dayData4?.duration}>
                     {dayData4 && (
                         <CellComponent
-                            doc={dayData4.doctorName}
-                            subject={"Network"}
-                            place={"3A"}
+                            doc={dayData4?.teachingStaffName}
+                            subject={dayData4?.courseName}
+                            place={dayData4?.location}
+                            year={dayData4?.year}
+                            section={dayData4?.section}
+                            group={dayData4?.groupNumber}
+                            dep={dayData4?.departmentName}
                         />
                     )}
                 </td>

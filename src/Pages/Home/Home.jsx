@@ -20,7 +20,7 @@ const Home = () => {
             <div className='home mx-[111px]'>
                 <ScrollToTop />
                 <img src="/Images/Home/wave.png" className='absolute right-0 top-14 h-[450px] w-[100%] -z-10' />
-                <img src="/Images/Home/logout.png" onClick={handleLogout} className="absolute right-6 top-16 cursor-pointer " />
+                <img src="/Images/Home/logout.png" onClick={handleLogout} className="absolute right-6 top-[5rem] cursor-pointer " />
                 <div className='text-white mb-28'>
                     <Fade cascade>
                         <div>

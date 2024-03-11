@@ -19,7 +19,7 @@ const TeachingStaffBodySchedule = ({ day }) => {
     return (
         <>
             <tr className='text-center'>
-                <td colSpan={16} className='bg-[#0060E4] text-white text-5xl font-bold sticky top-[175px]'>{day}</td>
+                <td colSpan={16} className='bg-[#0060E4] text-white text-5xl font-bold sticky z-50 top-[166px]'>{day}</td>
             </tr>
             <tr>
                 <td className='time'>Ahmed Hosney</td>

@@ -14,7 +14,7 @@ const LabsBodySchedule = ({ day }) => {
     return (
         <>
             <tr className='text-center'>
-                <td colSpan={30} className='bg-[#0060E4] text-white text-5xl font-bold sticky top-[175px]'>{day}</td>
+                <td colSpan={30} className='bg-[#0060E4] text-white text-5xl font-bold sticky z-50 top-[166px]'>{day}</td>
             </tr>
             <tr>
                 <td className='time'>08:00 - 09:00</td>
