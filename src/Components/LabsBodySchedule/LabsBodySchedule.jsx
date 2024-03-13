@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
-import AddOnHover from '../AddOnHover/AddOnHover'
-import AddInfoLabs from '../AddInfo/AddInfoLabs'
+import FirstColumnCell from "../UserCells/FirstColumnCell/FirstColumnCell"
+import { appsss, generateScheduleCells } from "./labsScripts"
+
 
 const LabsBodySchedule = ({ day }) => {
-    let [tr, setTrue] = useState(false)
-    function handlesubmit(e) {
-        setTrue(!tr)
-    }
-    function cancelsubmit(event) {
-        event.preventDefault()
-        setTrue(!tr)
-    }
     return (
         <>
             <tr className='text-center'>
@@ -18,58 +10,15 @@ const LabsBodySchedule = ({ day }) => {
             </tr>
             <tr>
                 <td className='time'>08:00 - 09:00</td>
-                <td>
-                    <AddOnHover handle={handlesubmit} tr={tr} />
-                    {tr && <AddInfoLabs cancel={cancelsubmit} />}
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
+                {generateScheduleCells('sunday', appsss, ['1', '2', '3', '4', '5'])}
                 <td className='time'>08:00 - 09:00</td>
-                <td></td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
+                {generateScheduleCells('sunday', appsss, ['6', '7', '8', '9', '10'])}
                 <td className='time'>08:00 - 09:00</td>
-                <td></td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
+                {generateScheduleCells('sunday', appsss, ['11', '12', '13', '14', '15'])}
                 <td className='time'>08:00 - 09:00</td>
-                <td></td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
+                {generateScheduleCells('sunday', appsss, ['16', '17', '18', '19', '20'])}
                 <td className='time'>08:00 - 09:00</td>
-                <td></td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
+                {generateScheduleCells('sunday', appsss, ['21', '22', '23', '24', '25'])}
             </tr>
             <tr>
                 <td className='time'>09:00 - 10:00</td>
