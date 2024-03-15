@@ -5,11 +5,11 @@ const labData = {
         {
             "teachingStaffName": "Daniel Anderson",
             "courseName": "Introduction to Programming",
-            "day": "thursday",
-            "startTime": 12,
+            "day": "sunday",
+            "startTime": 8,
             "duration": 4,
             "year": 4,
-            "location": "0أ",
+            "location": "0ج",
             "section": 7,
             "groupNumber": null,
             "departmentName": null
@@ -165,6 +165,7 @@ export const appsss = {
     ...generateAppointments("thursday", "4د", "24", 8, 19),
     ...generateAppointments("thursday", "4ه", "25", 8, 19),
 };
+console.log(appsss);
 
 export function generateScheduleCells(day, appsss, labs) {
     const suffixes = labs;
